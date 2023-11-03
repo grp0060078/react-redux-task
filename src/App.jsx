@@ -2,7 +2,7 @@
 import React from 'react';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
-import cartReducer from '../reducers/cartReducer';
+import cartReducer from './reducers/CartReducer'
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 import { products } from './components/data';
