@@ -12,9 +12,10 @@ const ProductList = ({ products }) => {
   };
 
   return (
+    <div>
     <div className='ProductList'>
   
-      <ul type='none'>
+      <ul className='size' type='none'>
         {products.map((product) => (
         
           <li key={product.id}>
@@ -31,6 +32,7 @@ const ProductList = ({ products }) => {
 
     
       
+    </div>
     </div>
   );
 };

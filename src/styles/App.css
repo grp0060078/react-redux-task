@@ -1,38 +1,118 @@
-.cart{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
-    display: grid
+/* '../styles/App.css' */
+
+/* Define a grid container for the two columns */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr) repeat(4, 1fr); /* Adjust column units as needed */
+  gap: 20px; /* Add space between columns */
+  padding: 20px;
+  position: relative;
 }
 
-  button {
-    border: 2px;
-    
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 10%
-    font-size: 18px;
-    
-    
-  }
-
+/* Add your custom styles for the ProductList component here */
+.ProductList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   
- 
-  .ProductList{
-    display: grid;
-	grid-template-columns:1fr 2fr 1fr;
-	margin: auto;
-	padding: 2.5em 0;
-	min-width: 600px;
-	background-color: white;
-	border-radius: 5px;
-    text-align: center;
-  }
-  .App{
-    text-align: center;
-  }
+}
+h1{
+  text-align: center;
+}
+
+.ProductList li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 0 0 20px 0; /* Add space between items */
+  padding: 10px;
+  width: 100%; /* Take up the entire width of the first column */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.ProductList h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.ProductList img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ProductList h4 {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+.ProductList p {
+  font-weight: bold;
+}
+
+.ProductList button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Add your custom styles for the Cart component here */
+.cart {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 6%;
+  /* Ensure it appears above the ProductList */
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  grid-column: 9 / -1; /* Position the cart in the last 4 columns */
+}
+
+.cart h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.cart hr {
+  border: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.cart p {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.cart ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.cart h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.cart button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Add more styles as needed */
